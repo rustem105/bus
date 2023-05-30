@@ -9,6 +9,7 @@ exports.create = (req, res) => {
     }
 
     const treis = {
+        Route: req.body.route,
         Time: req.body.Time,
         DriverID: req.body.DriverID,
         Bus: req.body.Bus,
@@ -30,6 +31,7 @@ exports.update = (req, res) => {
     }
 
     const treis = {
+        Route: req.body.route,
         Time: req.body.Time,
         DriverID: req.body.DriverID,
         Bus: req.body.Bus,

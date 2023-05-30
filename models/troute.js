@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../database.js');
 
-const troute = db.define('troute', {
+const Troute = db.define('troute', {
     RouteID: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -31,4 +31,4 @@ const troute = db.define('troute', {
     ]
   });
 
-module.exports = troute;
+module.exports = Troute;

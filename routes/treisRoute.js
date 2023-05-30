@@ -1,7 +1,7 @@
 const authJwt = require("../middleware/authJwt");
 
 module.exports = app => {
-    const tReisController = require("../Controllers/treisController");
+    const tReisController = require("../controllers/treisController");
     const router = require("express").Router();
 
     router.post("/tReis/", [authJwt.verifyToken, authJwt.isAdmin], tReisController.create);

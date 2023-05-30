@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../database.js');
 
-const tdriver = db.define('tdriver', {
+const Tdriver = db.define('tdriver', {
     DriverNameID: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -47,4 +47,4 @@ const tdriver = db.define('tdriver', {
     ]
   });
 
-  module.exports = tdriver;
+  module.exports = Tdriver;

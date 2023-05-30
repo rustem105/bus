@@ -1,7 +1,7 @@
 const authJwt = require("../middleware/authJwt");
 
 module.exports = app => {
-    const tRouteController = require("../Controllers/trouteController");
+    const tRouteController = require("../controllers/trouteController");
     const router = require("express").Router();
 
     router.post("/tRoute/", [authJwt.verifyToken, authJwt.isAdmin], tRouteController.create);

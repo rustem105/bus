@@ -1,7 +1,7 @@
 const authJwt = require("../middleware/authJwt");
 
 module.exports = app => {
-    const tBustimeController = require("../Controllers/tbustimeController");
+    const tBustimeController = require("../controllers/tbustimeController");
     const router = require("express").Router();
 
     router.post("/tBustime/", [authJwt.verifyToken, authJwt.isAdmin], tBustimeController.create);

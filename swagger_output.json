@@ -408,7 +408,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "title": {
+                "BusID": {
+                  "example": "any"
+                },
+                "Phone": {
+                  "example": "any"
+                },
+                "DriverYears": {
                   "example": "any"
                 }
               }
@@ -461,7 +467,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "title": {
+                "BusID": {
+                  "example": "any"
+                },
+                "Phone": {
+                  "example": "any"
+                },
+                "DriverYears": {
                   "example": "any"
                 }
               }
@@ -562,6 +574,9 @@
                 },
                 "dDate": {
                   "example": "any"
+                },
+                "route": {
+                  "example": "any"
                 }
               }
             }
@@ -623,6 +638,9 @@
                   "example": "any"
                 },
                 "dDate": {
+                  "example": "any"
+                },
+                "route": {
                   "example": "any"
                 }
               }

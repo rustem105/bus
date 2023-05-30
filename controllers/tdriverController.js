@@ -1,7 +1,7 @@
 const Tdriver = require("../models/tdriver");
 
 exports.create = (req, res) => {
-    if (!req.body.title) {
+    if (!req.body.BusID || !req.body.Phone || !req.body.DriverYears) {
         res.status(400).send({
             message: "Content can't be empty"
         })
@@ -9,17 +9,19 @@ exports.create = (req, res) => {
     }
 
     const tdriver = {
-        title: req.body.title
+        BusID: req.body.BusID,
+        Phone: req.body.Phone,
+        DriverYears: req.body.DriverYears
     }
 
-    tdriver.create(tdriver)
+    Tdriver.create(tdriver)
     .then(data => {
         res.send(data)
     })
 }
 
 exports.update = (req, res) => {
-    if (!req.params.id || !req.body.title) {
+    if (!req.params.id || !req.body.BusID || !req.body.Phone || !req.body.DriverYears) {
         res.status(400).send({
             message: "Content can't be empty"
         })
@@ -27,18 +29,19 @@ exports.update = (req, res) => {
     }
 
     const tdriver = {
-        id: req.params.id,
-        title: req.body.title
+        BusID: req.body.BusID,
+        Phone: req.body.Phone,
+        DriverYears: req.body.DriverYears
     }
 
-    Tdriver.update(tdriver, {where:{id: tdriver.id}})
+    Tdriver.update(tdriver, {where:{DriverNameID: req.params.id}})
     .then(data => {
         res.send(data)
     })
 }
 
 exports.findAll = (req, res) => {
-    tdriver.findAll()
+    Tdriver.findAll()
     .then(data => {
         res.send(data);
     })
@@ -54,7 +57,7 @@ exports.findById = (req, res) => {
 
     const id = req.params.id;
     
-    Tdriver.findOne({where: {id: id}})
+    Tdriver.findOne({where: {DriverNameID: id}})
     .then(data => {
         res.send(data);
     })
@@ -70,7 +73,7 @@ exports.delete = (req, res) => {
 
     const id = req.params.id;
     
-    Tdriver.destroy({where: {id: id}})
+    Tdriver.destroy({where: {DriverNameID: id}})
     .then(data => {
         res.send(data)
     })

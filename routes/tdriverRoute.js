@@ -1,7 +1,7 @@
 const authJwt = require("../middleware/authJwt");
 
 module.exports = app => {
-    const tDriverController = require("../Controllers/tdriverController");
+    const tDriverController = require("../controllers/tdriverController");
     const router = require("express").Router();
 
     router.post("/tDriver/", [authJwt.verifyToken, authJwt.isAdmin], tDriverController.create);

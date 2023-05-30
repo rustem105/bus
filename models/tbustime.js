@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 const db = require('../database.js');
 const treis = require('./treis.js');
 
-const tbustime = db.define('tbustime', {
+const Tbustime = db.define('tbustime', {
     TimeID: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -48,4 +48,4 @@ const tbustime = db.define('tbustime', {
   });
 
 
-module.exports = tbustime;
+module.exports = Tbustime;

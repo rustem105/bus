@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../database.js');
 
-const tBus = db.define('tbus', {
+const TBus = db.define('tbus', {
     BusID: {
       type: Sequelize.INTEGER,
       allowNull: false,
@@ -35,4 +35,4 @@ const tBus = db.define('tbus', {
     ]
   });
 
-module.exports = tBus;
+module.exports = TBus;
