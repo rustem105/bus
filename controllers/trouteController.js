@@ -20,7 +20,7 @@ exports.create = (req, res) => {
 }
 
 exports.update = (req, res) => {
-    if (!req.params.id || !req.body.title) {
+    if (!req.params.id || req.body.tTo ||!req.body.fFrom) {
         res.status(400).send({
             message: "Content can't be empty"
         })
